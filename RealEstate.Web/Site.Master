@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RealEstate.Web.SiteMaster" %>
+
+<%-- bootstrap themes --%>
+<!DOCTYPE html>
+<html lang="en-US">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Ramzi Real Estate</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="properties-template-default single single-properties postid-23 bg-display-cover elementor-default">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+        <header class="header-default has-menu navbar-fixed">
+            <div class="container">
+
+                <!-- HEADER DEFAULT STYLE -->
+
+                <div class="navbar-header">
+                    <div class="header-details">
+                        <div class="header-item header-phone left">
+                            <div class="header-item-icon"><i class="fa fa-phone icon "></i></div>
+                            <div class="header-item-text">
+                                Call us anytime<br />
+                                <a href="tel:123-234-3456"><span>123-234-3456</span></a>
+                            </div>
+                        </div>
+                        <div class="header-item header-email left">
+                            <div class="header-item-icon"><i class="fa fa-envelope icon "></i></div>
+                            <div class="header-item-text">
+                                Drop us a line<br />
+                                <a href="mailto:hello@homely.com" title="hello@homely.com"><span>hello@homely.com</span></a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <a class="navbar-brand has-logo" href="https://homely.nightshiftcreative.co/">
+                        <img src="https://homely.nightshiftcreative.co/wp-content/themes/homely/images/logo.png" alt="Homely" /></a>
+
+                    <!-- NAVBAR TOGGLE -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- HEADER CLASSIC STYLE -->
+
+                <!-- MAIN MENU -->
+                <div class="navbar-collapse collapse">
+                    <div class="main-menu-wrap">
+                        <div class="container-fixed">
+                            <ul id="menu-main-menu-1" class="nav navbar-nav right">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-596"><a href="https://homely.nightshiftcreative.co/">Home</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-605"><a href="https://homely.nightshiftcreative.co/">Home Tabbed Search</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-606"><a href="https://homely.nightshiftcreative.co/">Headers</a></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MAIN MENU -->
+
+            </div>
+            <!-- end header container -->
+        </header>
+        <!-- End Header -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 widget widget-footer social-links">
+                        <div class="socil-links-widget">
+
+                            <div class="social-links-before-text">
+                                <p style="margin-bottom: 30px">
+                                    <%--add logo here--%>
+                                    <%--<img src="" alt="" />--%>
+                                </p>
+                                Lorem ipsum dolor amet, consectetur adipiscing elit. Sed ut purus eget nunc ut dignissim cursus at a nisl. Mauris vitae turpis quis eros egestas tempor sit amet a arcu. Duis egestas hendrerit diam.
+                            </div>
+                            <div class="divider"></div>
+
+                            <ul class="social-icons circle clean-list">
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 widget widget-footer list-posts-widget">
+                        <h4><span>From the Blog</span></h4>
+                        <table class="widget-divider">
+                            <tr>
+                                <td>
+                                    <div class="rhex"></div>
+                                </td>
+                                <td>
+                                    <div class="bar"></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="list-property list-posts">
+                            <div class="row">
+
+                                <div class="col-lg-12">
+                                    <h5 title="Announcing: Our Featured Properties of the Month"><a href="https://homely.nightshiftcreative.co/announcing-our-featured-properties-of-the-month/">Announcing: Our Featured Properties of the Month</a></h5>
+                                    <p>June 3, 2017</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim&hellip;</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="list-property list-posts">
+                            <div class="row">
+
+                                <div class="col-lg-12">
+                                    <h5 title="Common mistakes to avoid when moving"><a href="https://homely.nightshiftcreative.co/common-mistakes-to-avoid-when-moving/">Common mistakes to avoid when moving</a></h5>
+                                    <p>June 3, 2017</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim&hellip;</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 widget widget-footer widget_text">
+                        <h4><span>Get In Touch</span></h4>
+                        <table class="widget-divider">
+                            <tr>
+                                <td>
+                                    <div class="rhex"></div>
+                                </td>
+                                <td>
+                                    <div class="bar"></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="textwidget">
+                            <p>
+                                <strong>123 Smith Drive</strong><br />
+                                Annapolis, MD 21012<br />
+                                United States
+                            </p>
+                            <p>
+                                <strong>Open Hours</strong><br />
+                                Mondy &#8211; Friday: 9 am &#8211; 5 pm<br />
+                                Saturday: 9 am &#8211; 1pm<br />
+                                Sunday: Closed
+                            </p>
+                            <p><i class="fa fa-phone icon"></i>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 widget widget-footer widget_mc4wp_form_widget">
+                        <h4><span>Newsletter</span></h4>
+                        <table class="widget-divider">
+                            <tr>
+                                <td>
+                                    <div class="rhex"></div>
+                                </td>
+                                <td>
+                                    <div class="bar"></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <script>(function () {
+                                window.mc4wp = window.mc4wp || {
+                                    listeners: [],
+                                    forms: {
+                                        on: function (evt, cb) {
+                                            window.mc4wp.listeners.push(
+                                                {
+                                                    event: evt,
+                                                    callback: cb
+                                                }
+                                            );
+                                        }
+                                    }
+                                }
+                            })();
+                        </script>
+                        <!-- Mailchimp for WordPress v4.8.1 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                        <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-685" method="post" data-id="685" data-name="Newsletter">
+                            <div class="mc4wp-form-fields">
+                                <p>
+                                    <label>Email address: </label>
+                                    <input type="email" name="EMAIL" placeholder="Your email address" required />
+                                </p>
+
+                                <p>
+                                    <input type="submit" value="Sign up" />
+                                </p>
+                            </div>
+                            <label style="display: none !important;">
+                                Leave this field empty if you're human:
+                            <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1609817998" /><input type="hidden" name="_mc4wp_form_id" value="685" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div>
+                        </form>
+                        <!-- / Mailchimp for WordPress Plugin -->
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end footer container -->
+        </footer>
+
+        <div class="bottom-bar">
+            <div class="container">
+                <span>Homely | Theme by <a href="http://nightshiftcreative.co/" target="_blank">Nightshift Creative</a> | © 2019</span>
+            </div>
+        </div>
+        <script src="Scripts/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
